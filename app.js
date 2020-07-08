@@ -47,10 +47,10 @@ app.post("/",function(req,res){
       ]
     };
     const signdetails=JSON.stringify(data);
-    const url = "https://us8.api.mailchimp.com/3.0/lists/08dc209bde";
+    const url = process.env.URL;
     const options = {
       method: "POST",
-      auth: "ayan:e723be00af6bd3ee6a9b6ed0ef402461-us8",
+      auth: process.env.API_KEY,
     };
 
 
